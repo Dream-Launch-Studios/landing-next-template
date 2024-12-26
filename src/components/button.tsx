@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cva, VariantProps } from "class-variance-authority";
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
-import { cn } from "./utils/utils";
+import { cn } from "../utils/utils";
 
 type ButtonBaseProps = VariantProps<typeof buttonClasses> & {
   children: React.ReactNode;
