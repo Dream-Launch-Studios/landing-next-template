@@ -22,10 +22,10 @@ const buttonClasses = cva("relative rounded-full inline-flex items-center", {
   variants: {
     variant: {
       primary: [
-        "bg-primary border  border-tranparent-white text-off-white hover:bg-primary/30 transition-colors",
+        "bg-primary border  border-transparent-white text-off-white hover:bg-primary/30 transition-colors",
       ],
       secondary: [
-        "border border-tranparent-white hover:bg-primary transition-colors ",
+        "border border-transparent-white hover:bg-primary transition-colors ",
       ],
     },
     size: {

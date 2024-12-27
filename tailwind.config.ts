@@ -57,13 +57,14 @@ export default {
     extend: {
       colors: {
         transparent: "transparent",
-        "tranparent-white": "rgb(247 248 248 / 0.1)",
+        "transparent-white": "rgb(247 248 248 / 0.1)",
         background: "#000",
         "off-white": "#f7f8f8",
-        primary: "#262626",
+        primary: "#171717",
         grey: "#858699",
         "grey-dark": "#222326",
         "primary-text": "#b4bcd0",
+        brand: "#F39866",
       },
     },
 
