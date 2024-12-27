@@ -12,3 +12,34 @@
     font-size: 62.5%;
   }
 }
+
+@layer utilities {
+  .mask-gradient-opacity {
+    -webkit-mask: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 27%,
+      rgb(0, 0, 0) 100%
+    );
+    mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 27%, rgb(0, 0, 0) 100%);
+    opacity: 1;
+  }
+
+  .mask-image-custom {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 128px,
+      black calc(100% - 200px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 128px,
+      black calc(100% - 200px),
+      transparent 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+}
