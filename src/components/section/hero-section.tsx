@@ -1,8 +1,8 @@
 import { Background } from "@/components/background";
-import { Button, Highlight } from "@/components/button";
 import { Container } from "@/components/container";
 import { Hero, HeroSubTitle, HeroTitle } from "@/components/hero";
 import { HeroImage } from "../hero-image";
+import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
@@ -11,16 +11,12 @@ export function HeroSection() {
         <Hero className="relative">
           <Background className="mix-blend-lighten opacity-10 absolute top-0 left-0 -z-50" />
 
-          <Button className="">
-            <Highlight>New Article on 5 benefits of localisation!</Highlight>
-          </Button>
-
-          <HeroTitle className="font-medium">
-            Effectively Translate <br className="hidden md:block" /> Your Site
-            With AI
+          <HeroTitle className="font-medium animate-fade-in [--animation-delay:200ms] opacity-0 translate-y-[-1rem]">
+            Effectively <span className="text-brand">Translate</span>{" "}
+            <br className="hidden md:block" /> Your Site With AI
           </HeroTitle>
 
-          <HeroSubTitle>
+          <HeroSubTitle className="animate-fade-in [--animation-delay:400ms] opacity-0 translate-y-[-1rem]">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores{" "}
             <br />
             enim sequi accusantium repudiandae laborum?

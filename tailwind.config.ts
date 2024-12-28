@@ -71,11 +71,30 @@ export default {
     animation: {
       "infinite-scroll":
         "infinite-scroll var(--animation-delay) linear infinite forwards",
+      "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
+      "image-rotate": "image-rotate 1400ms ease forwards",
+      "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
     },
     keyframes: {
       "infinite-scroll": {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(-50%)" },
+      },
+      "border-beam": {
+        "100%": {
+          "offset-distance": "100%",
+        },
+      },
+
+      "fade-in": {
+        from: { opacity: "0", transform: "translateY(-10px)" },
+        to: { opacity: "1", transform: "none" },
+      },
+      "image-rotate": {
+        "0%": { transform: "rotateX(25deg)" },
+        "25%": { transform: "rotateX(25deg) scale(0.9)" },
+        "60%": { transform: "none" },
+        "100%": { transform: "none" },
       },
     },
   },
