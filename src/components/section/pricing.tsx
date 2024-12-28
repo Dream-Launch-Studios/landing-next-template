@@ -34,7 +34,7 @@ export function PricingComponent() {
                     <p className="mb-2 text-xl font-semibold tracking-tight">
                       From $29/mo
                     </p>
-                    <p className="tracking-tight">
+                    <p className="tracking-tight text-sm">
                       The ideal plan for larger businesses who require heavy
                       usage.
                     </p>
@@ -55,7 +55,7 @@ export function PricingComponent() {
               </div>
             </div>
 
-            <div className="w-full p-6  ">
+            <div className="w-full p-6 relative">
               <div
                 className="transform-gpu overflow-hidden rounded-2xl p-px transition duration-500 hover:-translate-y-2"
                 style={{
@@ -79,10 +79,13 @@ export function PricingComponent() {
                       <h4 className="mb-6 text-6xl tracking-tighter text-white">
                         Startup
                       </h4>
-                      <p className="mb-2 text-xl font-semibold tracking-tighter text-white">
-                        From $99/mo
-                      </p>
-                      <p className="tracking-tight text-white">
+                      <div className="mb-2">
+                        <p className="text-xl font-semibold tracking-tighter text-white">
+                          From $99/mo
+                        </p>
+                        <p className="text-sm font-semibold">(New Year Sale)</p>
+                      </div>
+                      <p className="tracking-tight text-white text-sm">
                         The ideal plan for larger businesses who require heavy
                         usage.
                       </p>
@@ -112,7 +115,7 @@ export function PricingComponent() {
                     <p className="mb-2 text-xl font-semibold tracking-tighter">
                       From $399/mo
                     </p>
-                    <p className="tracking-tight">
+                    <p className="tracking-tight text-sm">
                       We can customize a plan that suits the exact needs of your
                       business.
                     </p>
@@ -134,7 +137,9 @@ const FeatureItem = ({ children }: { children: string }) => {
   return (
     <li className="flex items-center py-1.5">
       <CheckIcon className="mr-3 size-3 text-green-400" />
-      <span className="font-medium tracking-tight">{children}</span>
+      <span className="font-medium tracking-tight text-primary-text">
+        {children}
+      </span>
     </li>
   );
 };
@@ -150,20 +155,25 @@ const PricingButton = ({
   noCardRequired?: boolean;
 }) => {
   return (
-    <>
+    <div className="">
       <a
-        className="inline-block w-full rounded-lg border border-transparent-white  bg-transparent px-5 py-4 text-center font-semibold tracking-tight transition duration-200 hover:scale-105 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-800"
+        className="inline-block w-full rounded-lg border border-transparent-white  bg-transparent px-5 py-4 text-center font-semibold tracking-tight transition duration-200 hover:scale-105 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-800 mb-4 text-sm"
         href={href ?? ""}
       >
         {children}
       </a>
-      <p className="text-center mt-5">
-        {noCardRequired && (
-          <span className="text-sm tracking-tight text-neutral-600 ">
+
+      <p className="text-center">
+        {noCardRequired ? (
+          <span className="text-sm tracking-tight text-primary-text ">
             No credit card required
+          </span>
+        ) : (
+          <span className="text-sm tracking-tight text-primary-text">
+            Contact for more details
           </span>
         )}
       </p>
-    </>
+    </div>
   );
 };
