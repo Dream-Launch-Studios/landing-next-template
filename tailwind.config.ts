@@ -8,7 +8,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: '"Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;',
+      sans: ' custom-font, "Helvetica Neue", Helvetica, Arial, "sans-serif"',
     },
     fontSize: {
       xs: "1.3rem",
@@ -70,12 +70,24 @@ export default {
 
     animation: {
       "infinite-scroll":
-        "infinite-scroll var(--animation-delay) linear infinite forwards",
+        "infinite-scroll var(--animation-delay) linear infinite ",
       "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
       "image-rotate": "image-rotate 1400ms ease forwards",
       "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+
+      marquee: "marquee var(--duration) linear infinite",
+      "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
     },
     keyframes: {
+      marquee: {
+        from: { transform: "translateX(0)" },
+        to: { transform: "translateX(calc(-100% - var(--gap)))" },
+      },
+      "marquee-vertical": {
+        from: { transform: "translateY(0)" },
+        to: { transform: "translateY(calc(-100% - var(--gap)))" },
+      },
+
       "infinite-scroll": {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(-50%)" },
