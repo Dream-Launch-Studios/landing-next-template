@@ -1,9 +1,11 @@
+import { cn } from "@/lib/utils";
+
 export function Background({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2000 1500"
-      className={className}
+      className={cn(className)}
     >
       <rect fill="#000000" width="2000" height="1500" />
       <defs>
@@ -18,9 +20,9 @@ export function Background({ className }: { className?: string }) {
           <use fill="#242424" href="#s" y="2" />
           <use fill="#242424" href="#s" x="1" y="2" />
           <use fill="#333333" href="#s" x="2" y="2" />
-          <use fill="#333333" href="#s" />
-          <use fill="#3e3e3e" href="#s" x="2" />
-          <use fill="#3e3e3e" href="#s" x="1" y="1" />
+          <use fill="#0001" href="#s" />
+          <use fill="#000" href="#s" x="2" />
+          <use fill="#001e" href="#s" x="1" y="1" />
         </pattern>
         <pattern
           id="b"
