@@ -18,14 +18,14 @@ interface ButtonAsButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 type ButtonProps = ButtonBaseProps &
   (ButtonAsAnchorProps | ButtonAsButtonProps);
 
-const buttonClasses = cva("relative rounded-full inline-flex items-center", {
+const buttonClasses = cva("relative rounded-lg inline-flex items-center", {
   variants: {
     variant: {
       primary: [
-        "bg-primary-gradient hover:text-shadow hover:shadow-primary transition-[shadow,text-shadow]",
+        "border-2 border-transparent-white bg-brand text-black inset-0 hover:border-white/30 hover:bg-orange-300 transition-colors",
       ],
       secondary: [
-        "text-off-white bg-white bg-opacity-10 border border-transparent-white backdrop-filter-[12px] hover:bg-opacity-20 transition-colors ease-in",
+        "border border-transparent-white hover:bg-primary transition-colors",
       ],
     },
     size: {
