@@ -1,30 +1,131 @@
 "use client";
+import { useState, useEffect } from "react";
+import Macbook from "@/../public/macbook-desktop.png";
+import DesktopView from "@/../public/desktop-view.png";
+import MacbookCodeKitMobile from "@/../public/macbook-codekit-mobile.png";
+import Image from "next/image";
 
-import { cn } from "@/lib/utils";
-import { useInView } from "react-intersection-observer";
-import { BorderBeam } from "./ui/border-beam";
+const ScrollZoom = ({
+  minZoom = 0.5,
+  maxZoom = 2.2,
+  startZoom = 0.9,
+  zoomSpeed = 500,
+}) => {
+  const [scale, setScale] = useState(startZoom);
+  const [macbookOpacity, setMacbookOpacity] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
-export function HeroImage() {
-  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
+    const handleScroll = () => {
+      const vh = window.innerHeight / 100;
+      const scrollTop = document.documentElement.scrollTop;
+      const start = 100 * vh;
+      const stop = 200 * vh;
+
+      if (scrollTop > start && scrollTop < stop) {
+        const newScale = Math.max(
+          startZoom - (scrollTop - start) / zoomSpeed,
+          minZoom
+        );
+        setScale(newScale);
+        const opacity = Math.min((scrollTop - start) / (stop - start), 1);
+        setMacbookOpacity(opacity);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [minZoom, maxZoom, startZoom, zoomSpeed, isMobile]);
+
+  if (isMobile) {
+    return (
+      <div className="flex flex-col items-center justify-center md:min-h-screen">
+        <img
+          src={MacbookCodeKitMobile.src}
+          alt="Mobile View"
+          className="w-full px-4"
+        />
+        <div className="text-rose-gold-400 text-center text-2xl font-bold mt-8 px-4">
+          Welcome to the future of AI code and docs chunking 🛠️
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div ref={ref} className="mt-12 [perspective:2000px] py-8">
+    <>
       <div
-        className={cn(
-          "max-w-[100rem] rounded-lg mx-auto bg-primary h-[70vh] p-4 flex flex-col gap-y-2 border border-transparent-white",
-          inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]"
-        )}
+        style={{
+          position: "relative",
+          zIndex: 2,
+        }}
+        className="flex flex-col sm:mt-0 -mt-72 relative z-50 md:min-h-screen animate-fade-in [--animation-delay:400ms] "
       >
-        <div className="h-[3%]">
-          <div className="flex items-center gap-x-2">
-            <div className="w-5 h-5  bg-red-500 rounded-full"></div>
-            <div className="w-5 h-5 bg-yellow-500 rounded-full"></div>
-            <div className="w-5 h-5 bg-green-500 rounded-full"></div>
-          </div>
+        <div
+          className={`mt-10 -mb-28 text-rose-gold-400 text-center`}
+          style={{
+            opacity: scale <= 0.6 ? 0 : Math.min((2.2 - scale) / 1.6, 1),
+            transition: "opacity 0.5s ease-in-out",
+          }}
+        ></div>
+        <div
+          className="items-center"
+          style={{
+            position: "sticky",
+            top: "0vh",
+            height: "auto",
+            willChange: "transform",
+            overflow: "hidden",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Image
+            width={800}
+            height={800}
+            src={Macbook.src}
+            alt="Background Zoomable"
+            className="z-50"
+            style={{
+              width: `60%`,
+              position: "absolute",
+              left: "",
+              transform: `scale(${Math.min(1 / scale, 1.5)})`,
+              transition: "transform 0.1s ease-out",
+              opacity: macbookOpacity,
+            }}
+          />
+          <Image
+            width={800}
+            height={800}
+            src={DesktopView.src}
+            alt="Zoomable"
+            className="z-50"
+            style={{
+              width: `100%`,
+              transform: `scale(${scale})`,
+              transition: "transform 0.1s ease-out",
+              position: "relative",
+              zIndex: 999,
+              borderRadius: "sm:30px 10px",
+            }}
+          />
         </div>
-        <div className="bg-background h-[97%] rounded-xl"></div>
-        <BorderBeam size={180} duration={12} delay={9} />
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default ScrollZoom;

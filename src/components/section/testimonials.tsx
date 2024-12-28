@@ -1,84 +1,98 @@
-import { testimonials } from "@/lib/constant";
-import clsx from "clsx";
-import Image from "next/image";
-import { QuoteIcon } from "../icons/quote";
+"use client";
 
-export default function Testimonial() {
+import { cn } from "@/lib/utils";
+import { Marquee } from "../ui/marquee";
+import { Container } from "../container";
+import { reviews } from "@/lib/constant";
+import { motion } from "framer-motion";
+
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+}: {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}) => {
   return (
-    <section
-      id="testimonials"
-      aria-label="What our customers are saying"
-      className="relative py-20 sm:py-10"
+    <figure
+      className={cn(
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+      )}
     >
-      <div className="absolute inset-x-0 -top-10 opacity-50 z-10 m-auto h-[27rem] max-w-lg sm:h-64 sm:max-w-7xl"></div>
-      <Container>
-        <div className="mx-auto max-w-4xl md:text-center">
-          <h2 className="text-3xl tracking-tighter text-gray-100 sm:text-6xl font-semibold">
-            <span className="bg-brand bg-clip-text text-transparent">
-              Loved
-            </span>{" "}
-            by businesses worldwide.
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
+
+export function Testimonial() {
+  return (
+    <motion.div
+      initial={{ y: 70, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ ease: "easeIn", delay: 0.3 }}
+      className="xl:mask-gradient-opacity animate-fade-in"
+    >
+      <Container className="py-10">
+        <div className="mx-auto max-w-full text-center mb-10">
+          <h2 className="text-6xl tracking-tighter text-gray-100 sm:text-6xl ">
+            <span className="bg-brand bg-clip-text text-transparent mr-3">
+              Loved by
+            </span>
+            businesses worldwide.
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-gray-300 font-geist">
+          <p className="mt-4 text-lg tracking-tight text-gray-300 font-geist max-w-5xl mx-auto text-center">
             Our software is so simple that people can’t help but fall in love
             with it. Simplicity is easy when you just skip tons of
             mission-critical features.
           </p>
         </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
-        >
-          {testimonials.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-6 sm:gap-y-8">
-                {column.map((testimonial, testimonialIndex) => (
-                  <li key={testimonialIndex}>
-                    <figure className="relative rounded-2xl bg-transparent [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#8686f01f_inset] p-6 shadow-xl">
-                      <QuoteIcon className="absolute left-6 top-6 fill-slate-950" />
-                      <blockquote className="relative">
-                        <p className="text-lg tracking-tight text-gray-100">
-                          {testimonial.content}
-                        </p>
-                      </blockquote>
-                      <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100/10 pt-6">
-                        <div className="w-2/3">
-                          <div className="font-display text-sm text-base text-gray-100">
-                            {testimonial.author.name}
-                          </div>
-                          <div className="mt-1 text-xs text-primary-text">
-                            {testimonial.author.role}
-                          </div>
-                        </div>
-                        <div className="overflow-hidden rounded-full bg-slate-50">
-                          <Image
-                            className="h-14 w-14 object-cover"
-                            src={testimonial.author.image}
-                            alt=""
-                            width={60}
-                            height={60}
-                          />
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+
+        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl mask-image-custom pb-10">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((review) => (
+              <ReviewCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:20s]">
+            {secondRow.map((review) => (
+              <ReviewCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((review) => (
+              <ReviewCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:20s]">
+            {secondRow.map((review) => (
+              <ReviewCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+        </div>
       </Container>
-    </section>
-  );
-}
-export function Container({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"div">) {
-  return (
-    <div
-      className={clsx("mx-auto max-w-7xl px-4 sm:px-6 lg:px-8", className)}
-      {...props}
-    />
+    </motion.div>
   );
 }
