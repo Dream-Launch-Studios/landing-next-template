@@ -8,7 +8,7 @@ export function Companies() {
         <p className="text-md text-center text-brand font-medium">Trusted By</p>
 
         <div className="flex items-center max-w-[70rem] mx-auto my-5 overflow-hidden  mask-image-custom">
-          <div className="flex animate-infinite-scroll [--animation-delay:50s]">
+          <div className="flex animate-infinite-scroll [--animation-delay:40s]">
             {icons.map((icon) => (
               <div key={icon.id} className=" flex items-center mx-8 max-w-none">
                 <icon.component className="w-auto h-auto" />
