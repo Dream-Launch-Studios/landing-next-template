@@ -1,12 +1,36 @@
 "use client";
+
 import { clsx } from "clsx";
 import { motion } from "framer-motion";
 
+const variants = {
+  idle: {
+    scale: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+    },
+  },
+  active: {
+    scale: 1.02,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+    },
+  },
+};
+
 export default function Features() {
   return (
-    <div className="py-16 container mx-auto">
-      <h1 className="font-geistMono tracking-tight text-3xl md:text-5xl text-center font-semibold">
-        Packed with <span className="text-brand">powerful</span> of features
+    <motion.div
+      initial={{ y: 70, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ ease: "easeIn", delay: 0.3 }}
+      className="py-16 container mx-auto"
+    >
+      <h1 className="font-geistMono tracking-tight text-3xl md:text-6xl text-center  mb-4">
+        Packed with <span className="text-brand">powerful features</span>
       </h1>
       <p className="max-w-5xl text-center mx-auto text-primary-text text-md font-medium">
         From Image generation to video generation, Everything AI has APIs for
@@ -38,7 +62,7 @@ export default function Features() {
           graphic={
             <div className="absolute  inset-0 -top-20 -left-60 bg-[url(https://framerusercontent.com/images/gR21e8Wh6l3pU6CciDrqt8wjHM.png)] object-scale-down" />
           }
-          className="lg:col-span-2 lg:rounded-bl-4xl"
+          className="lg:col-span-2 lg:rounded-bl-4xl grayscale-0"
         />
         <BentoCard
           eyebrow="Source"
@@ -47,7 +71,7 @@ export default function Features() {
           graphic={
             <div className="absolute inset-0 bg-[url(https://framerusercontent.com/images/PTO3RQ3S65zfZRFEGZGpiOom6aQ.png)] object-contain" />
           }
-          className="lg:col-span-2"
+          className="lg:col-span-2 "
         />
         <BentoCard
           eyebrow="Limitless"
@@ -59,7 +83,7 @@ export default function Features() {
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 export function BentoCard({
@@ -83,7 +107,7 @@ export function BentoCard({
     <motion.div
       initial="idle"
       whileHover="active"
-      variants={{ idle: {}, active: {} }}
+      variants={variants}
       data-dark={dark ? "true" : undefined}
       className={clsx(
         className,
