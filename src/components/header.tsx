@@ -37,7 +37,13 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button variant="secondary">Log in</Button>
+          <Button
+            variant="secondary"
+            size="medium"
+            className="border border-transparent-white bg-transparent hover:bg-primary transition-colors"
+          >
+            Log in
+          </Button>
           <Button>Sign up</Button>
         </div>
       </Container>

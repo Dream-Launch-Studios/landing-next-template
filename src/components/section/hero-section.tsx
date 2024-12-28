@@ -24,7 +24,6 @@ export function HeroSection() {
 
           <div className="mb-12 flex items-center gap-4 justify-center">
             <Button>Get Started</Button>
-            <Button>Book a demo</Button>
           </div>
 
           <HeroImage />
