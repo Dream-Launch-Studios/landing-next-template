@@ -69,9 +69,9 @@ const ScrollZoom = ({
       <div
         style={{
           position: "relative",
-          zIndex: 2,
+          zIndex: 40,
         }}
-        className="flex flex-col sm:mt-0 -mt-72 relative z-50 md:min-h-screen animate-fade-in [--animation-delay:400ms] "
+        className="flex flex-col sm:mt-0 -mt-72  md:min-h-screen animate-fade-in [--animation-delay:200ms] "
       >
         <div
           className={`mt-10 -mb-28 text-rose-gold-400 text-center`}
