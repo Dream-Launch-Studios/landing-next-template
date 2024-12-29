@@ -19,7 +19,7 @@ export function PricingComponent() {
             <h2 className="mb-4 text-6xl tracking-tighter">
               Pricing <span className="text-brand">&amp;</span> Plans
             </h2>
-            <p className="text-md tracking-tight text-primary-text">
+            <p className="text-lg tracking-tight text-primary-text">
               Use and reuse tons of responsive sections to create the perfect
               layout. Sections are ready.
             </p>

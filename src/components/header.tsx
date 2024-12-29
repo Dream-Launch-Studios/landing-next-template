@@ -35,8 +35,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className="py-4 fixed top-0 left-0 w-full z-50 animate-fade-in [--animation-delay:200ms]">
-      <Container className="flex items-center justify-between w-full p-8 bg-background/20 rounded-full h-navigation-height border border-transparent-white backdrop-blur-sm">
+    <header className="py-4 fixed top-0 left-0 w-full z-50">
+      <Container className="flex items-center justify-between w-full p-8 rounded-full h-navigation-height border border-transparent-white backdrop-blur-sm bg-background/20 animate-fade-in [--animation-delay:200ms]">
         <div className="flex items-center gap-12">
           <Link href="/" className="text-4xl font-bold">
             Logo
