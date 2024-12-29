@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 export function HeroSection() {
   return (
     <>
-      <div className="absolute left-0 top-0 h-[20%] w-full bg-background -z-50">
+      <div className="absolute left-0 top-0 h-[10%] xl:h-[20%] w-full bg-background -z-50">
         <div className="absolute h-full w-full bg-[radial-gradient(#F39866_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40"></div>
       </div>
       <Container className="mt-[12rem] mb-8 overflow-hidden">

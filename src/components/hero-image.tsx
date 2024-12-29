@@ -30,8 +30,8 @@ const ScrollZoom = ({
     const handleScroll = () => {
       const vh = window.innerHeight / 100;
       const scrollTop = document.documentElement.scrollTop;
-      const start = 100 * vh;
-      const stop = 200 * vh;
+      const start = 50 * vh;
+      const stop = 100 * vh;
 
       if (scrollTop > start && scrollTop < stop) {
         const newScale = Math.max(
@@ -56,23 +56,13 @@ const ScrollZoom = ({
           alt="Mobile View"
           className="w-full px-4"
         />
-        <div className="text-rose-gold-400 text-center text-xl font-bold mt-8 px-4">
-          Welcome to the future of AI code and docs chunking 🛠️
-        </div>
       </div>
     );
   }
 
   return (
     <>
-      <div
-        style={{
-          position: "relative",
-          height: "200vh",
-          zIndex: 40,
-        }}
-        className="flex flex-col sm:mt-0 -mt-72  md:min-h-screen animate-fade-in [--animation-delay:200ms] "
-      >
+      <div className="flex flex-col sm:mt-0 -mt-72  md:min-h-[30vh] animate-fade-in [--animation-delay:200ms]">
         <div
           className={`mt-10 -mb-28 text-rose-gold-400 text-center`}
           style={{
