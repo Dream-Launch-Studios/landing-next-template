@@ -18,7 +18,7 @@ export default function NewsLetter() {
             <h3 className="text-4xl text-white font-bold tracking-tighter font-geist">
               Subscribe to our <span className="text-brand">newsletter</span>
             </h3>
-            <p className="leading-relaxed text-md text-primary-text">
+            <p className="leading-relaxed text-lg text-primary-text">
               Stay up to date with the roadmap progress, announcements and
               exclusive discounts feel free to sign up with your email.
             </p>

@@ -61,7 +61,7 @@ export function Testimonial() {
             </span>
             businesses worldwide.
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-gray-300 font-geist max-w-5xl mx-auto text-center">
+          <p className="mt-4 text-lg tracking-tight text-primary-text font-geist max-w-5xl mx-auto text-center">
             Our software is so simple that people can’t help but fall in love
             with it. Simplicity is easy when you just skip tons of
             mission-critical features.

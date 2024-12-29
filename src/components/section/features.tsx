@@ -32,7 +32,7 @@ export default function Features() {
       <h1 className="font-geistMono tracking-tight text-3xl md:text-6xl text-center  mb-4">
         Packed with <span className="text-brand">powerful features</span>
       </h1>
-      <p className="max-w-5xl text-center mx-auto text-primary-text text-md font-medium">
+      <p className="max-w-5xl text-center mx-auto text-primary-text text-lg font-medium">
         From Image generation to video generation, Everything AI has APIs for
         literally everything. It can even create this website copy for you.
       </p>
