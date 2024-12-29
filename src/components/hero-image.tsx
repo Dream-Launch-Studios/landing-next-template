@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Macbook from "@/../public/macbook-desktop.png";
 import DesktopView from "@/../public/desktop-view.png";
 import MacbookCodeKitMobile from "@/../public/macbook-codekit-mobile.png";
-import Image from "next/image";
 
 const ScrollZoom = ({
   minZoom = 0.5,
@@ -57,7 +56,7 @@ const ScrollZoom = ({
           alt="Mobile View"
           className="w-full px-4"
         />
-        <div className="text-rose-gold-400 text-center text-2xl font-bold mt-8 px-4">
+        <div className="text-rose-gold-400 text-center text-xl font-bold mt-8 px-4">
           Welcome to the future of AI code and docs chunking 🛠️
         </div>
       </div>
@@ -69,6 +68,7 @@ const ScrollZoom = ({
       <div
         style={{
           position: "relative",
+          height: "200vh",
           zIndex: 40,
         }}
         className="flex flex-col sm:mt-0 -mt-72  md:min-h-screen animate-fade-in [--animation-delay:200ms] "
@@ -92,9 +92,7 @@ const ScrollZoom = ({
             justifyContent: "center",
           }}
         >
-          <Image
-            width={800}
-            height={800}
+          <img
             src={Macbook.src}
             alt="Background Zoomable"
             className="z-50"
@@ -107,9 +105,7 @@ const ScrollZoom = ({
               opacity: macbookOpacity,
             }}
           />
-          <Image
-            width={800}
-            height={800}
+          <img
             src={DesktopView.src}
             alt="Zoomable"
             className="z-50"

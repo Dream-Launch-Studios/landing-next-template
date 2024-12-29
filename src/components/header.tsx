@@ -88,7 +88,7 @@ export function Header() {
           {hamburgerIcon ? <X /> : <Menu />}
         </button>
 
-        <div className="hidden xl:flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2">
           <Button size="medium" variant="secondary" className="">
             Log in
           </Button>
