@@ -2,17 +2,29 @@ import { Container } from "@/components/container";
 import { Hero, HeroSubTitle, HeroTitle } from "@/components/hero";
 import { Button } from "../ui/button";
 import { ChevronRight } from "lucide-react";
+import { Spotlight } from "../ui/spotlight";
+import Image from "next/image";
+import heroImg1 from "@/../public/heroimg1.avif";
+import heroImg2 from "@/../public/heroimg2.avif";
 
 export function HeroSection() {
   return (
     <>
-      <div className="absolute left-0 top-0 h-[10%] xl:h-[20%] w-full bg-background -z-50">
-        <div className="absolute h-full w-full bg-[radial-gradient(#F39866_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40"></div>
-      </div>
-      <Container className="mt-[12rem] mb-8 overflow-hidden">
+      <Spotlight className="absolute top-0 left-0" fill="white" />
+      <Image
+        src={heroImg1}
+        alt="hero-img1"
+        className="absolute -z-50 top-10 right-20 blur-sm animate-bounce w-20 h-20"
+      />
+      <Image
+        src={heroImg2}
+        alt="hero-img1"
+        className="absolute -z-50 top-[30rem] md:right-0 xl:right-[20rem] blur-sm animate-bounce opacity-50 xl:opacity-80"
+      />
+      <Container className="mt-[12rem] mb-8 overflow-hidden ">
         <Hero className="relative">
           <HeroTitle className=" animate-fade-in [--animation-delay:200ms] opacity-0 translate-y-[-1rem] font-semibold">
-            Effectively <span className="text-brand">Translate</span>{" "}
+            Effectively <span className="text-brand">Translate</span>
             <br className="hidden md:block" /> Your Site With AI
           </HeroTitle>
 
