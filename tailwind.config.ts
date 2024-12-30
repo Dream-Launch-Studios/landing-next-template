@@ -7,9 +7,6 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      sans: ' custom-font, "Helvetica Neue", Helvetica, Arial, "sans-serif"',
-    },
     fontSize: {
       xs: "1.3rem",
       sm: "1.4rem",
@@ -64,11 +61,13 @@ export default {
         grey: "#858699",
         "grey-dark": "#222326",
         "primary-text": "#b4bcd0",
-        brand: "#F39866",
+        brand: "#fdba74",
       },
     },
 
     animation: {
+      spotlight: "spotlight 2s ease .75s 1 forwards",
+
       "infinite-scroll":
         "infinite-scroll var(--animation-delay) linear infinite ",
       "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
@@ -77,8 +76,31 @@ export default {
 
       marquee: "marquee var(--duration) linear infinite",
       "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      bounce: "bounce 8s infinite",
     },
     keyframes: {
+      bounce: {
+        "0%, 100%": {
+          transform: "translateY(-10%)",
+          "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+        },
+        "50%": {
+          transform: "translateY(0)",
+          "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
+        },
+      },
+
+      spotlight: {
+        "0%": {
+          opacity: "0",
+          transform: "translate(-72%, -62%) scale(0.5)",
+        },
+        "100%": {
+          opacity: "1",
+          transform: "translate(-50%,-40%) scale(1)",
+        },
+      },
+
       marquee: {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(calc(-100% - var(--gap)))" },

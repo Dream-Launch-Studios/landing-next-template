@@ -23,11 +23,9 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border border-brand p-4",
+        "border-brand/[0.5] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "dark:border-brand/[.3] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -51,14 +49,12 @@ export function Testimonial() {
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ ease: "easeIn", delay: 0.3 }}
-      className="xl:mask-gradient-opacity animate-fade-in"
+      className="animate-fade-in"
     >
       <Container className="py-10">
         <div className="mx-auto max-w-full text-center mb-10">
-          <h2 className="text-6xl tracking-tighter text-gray-100 sm:text-6xl ">
-            <span className="bg-brand bg-clip-text text-transparent mr-3">
-              Loved by
-            </span>
+          <h2 className="text-6xl tracking-tighter  sm:text-6xl font-semibold">
+            <span className="mr-2 text-brand">Loved by</span>
             businesses worldwide.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-primary-text font-geist max-w-5xl mx-auto text-center">

@@ -29,7 +29,7 @@ export default function Features() {
       transition={{ ease: "easeIn", delay: 0.3 }}
       className="py-16 container mx-auto"
     >
-      <h1 className="font-geistMono tracking-tight text-3xl md:text-6xl text-center  mb-4">
+      <h1 className="font-geistMono tracking-tight text-3xl md:text-6xl text-center font-bold mb-4">
         Packed with <span className="text-brand">powerful features</span>
       </h1>
       <p className="max-w-5xl text-center mx-auto text-primary-text text-lg font-medium">
