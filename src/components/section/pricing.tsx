@@ -16,7 +16,7 @@ export function PricingComponent() {
       >
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-20 max-w-2xl text-center">
-            <h2 className="mb-4 text-6xl tracking-tighter">
+            <h2 className="mb-4 text-6xl font-bold tracking-tighter">
               Pricing <span className="text-brand">&amp;</span> Plans
             </h2>
             <p className="text-lg tracking-tight text-primary-text">

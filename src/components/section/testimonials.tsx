@@ -24,8 +24,8 @@ const ReviewCard = ({
     <figure
       className={cn(
         "relative w-64 cursor-pointer overflow-hidden rounded-xl border border-brand p-4",
-        "border-brand/[0.5] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        "dark:border-brand/[.3] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "border-brand bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "dark:border-brand dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -80,11 +80,7 @@ export function Testimonial() {
               <ReviewCard key={review.name} {...review} />
             ))}
           </Marquee>
-          <Marquee reverse pauseOnHover className="[--duration:20s]">
-            {secondRow.map((review) => (
-              <ReviewCard key={review.name} {...review} />
-            ))}
-          </Marquee>
+
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
         </div>
