@@ -20,7 +20,8 @@ export function PricingComponent() {
               Pricing
             </p>
             <h2 className="mb-4 text-6xl font-bold tracking-tighter">
-              Simple <span className="font-serif">pricing,</span> no surprises.
+              Simple <span className="font-serif text-brand">pricing,</span> no
+              surprises.
             </h2>
             <p className="text-lg tracking-tight text-primary-text">
               Choose a plan that fits your needs, with everything you need to
