@@ -30,7 +30,7 @@ export default function Features() {
       className="py-16 container mx-auto"
     >
       <p className="text-md text-brand font-bold text-center mb-2">Features</p>
-      <h1 className="font-geistMono tracking-tight text-3xl md:text-6xl text-center font-bold mb-4">
+      <h1 className="tracking-tight text-3xl md:text-6xl text-center font-bold mb-4">
         Packed with{" "}
         <span
           className="text-brand glow font-serif"
@@ -42,7 +42,7 @@ export default function Features() {
           powerful features
         </span>
       </h1>
-      <p className="max-w-5xl text-center mx-auto text-primary-text text-lg font-medium">
+      <p className="max-w-5xl text-center mx-auto text-primary-text text-md md:text-lg font-medium">
         From Image generation to video generation, Everything AI has APIs for
         literally everything. It can even create this website copy for you.
       </p>
@@ -52,7 +52,7 @@ export default function Features() {
           title="Get perfect clarity"
           description="PerkAI uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
           graphic={
-            <div className="absolute inset-0 bg-[url(https://framerusercontent.com/images/ghyfFEStl6BNusZl0ZQd5r7JpM.png)] object-fill" />
+            <div className="absolute inset-0 -top-30 -left-[25rem] bg-[url(https://framerusercontent.com/images/ghyfFEStl6BNusZl0ZQd5r7JpM.png)] object-fill" />
           }
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
@@ -61,7 +61,7 @@ export default function Features() {
           title="Undercut your competitors"
           description="With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged."
           graphic={
-            <div className="absolute inset-0 bg-[url(https://framerusercontent.com/images/7CJtT0Pu3w1vNADktNltoMFC9J4.png)] object-fill" />
+            <div className="absolute inset-0 -top-30 -left-[25rem] bg-[url(https://framerusercontent.com/images/7CJtT0Pu3w1vNADktNltoMFC9J4.png)] object-fill" />
           }
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />
@@ -70,7 +70,7 @@ export default function Features() {
           title="Built for power users"
           description="It’s never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
           graphic={
-            <div className="absolute  inset-0 -top-20 -left-60 bg-[url(https://framerusercontent.com/images/gR21e8Wh6l3pU6CciDrqt8wjHM.png)] object-scale-down" />
+            <div className="absolute  inset-0 -top-20 -left-[25rem] bg-[url(https://framerusercontent.com/images/gR21e8Wh6l3pU6CciDrqt8wjHM.png)] object-scale-down" />
           }
           className="lg:col-span-2 lg:rounded-bl-4xl grayscale-0"
         />
@@ -79,7 +79,7 @@ export default function Features() {
           title="Get the furthest reach"
           description="Bypass those inconvenient privacy laws to source leads from the most unexpected places."
           graphic={
-            <div className="absolute inset-0 bg-[url(https://framerusercontent.com/images/PTO3RQ3S65zfZRFEGZGpiOom6aQ.png)] object-contain" />
+            <div className="absolute inset-0 -top-20 -left-20 bg-[url(https://framerusercontent.com/images/PTO3RQ3S65zfZRFEGZGpiOom6aQ.png)] object-contain" />
           }
           className="lg:col-span-2 "
         />
@@ -88,7 +88,7 @@ export default function Features() {
           title="Sell globally"
           description="PerkAI helps you sell in locations currently under international embargo."
           graphic={
-            <div className="absolute inset-0 -top-44 -left-60 bg-[url(https://framerusercontent.com/images/CoAe1eW9S1x6kWgYfFZw038Bw.png?scale-down-to=512)] object-contain" />
+            <div className="absolute inset-0 -top-30 -left-60 bg-[url(https://framerusercontent.com/images/CoAe1eW9S1x6kWgYfFZw038Bw.png?scale-down-to=512)] object-contain" />
           }
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
@@ -96,6 +96,7 @@ export default function Features() {
     </motion.div>
   );
 }
+
 export function BentoCard({
   dark = false,
   className = "",
