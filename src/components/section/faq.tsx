@@ -56,11 +56,11 @@ export function FAQ() {
           <p className="text-md text-brand font-bold text-center mb-2">
             Frequently Asked Questions
           </p>
-          <h2 className="text-6xl tracking-tighter sm:text-6xl font-semibold">
+          <h2 className="text-3xl md:text-6xl tracking-tighter sm:text-6xl font-semibold">
             Everything you <span className="font-serif text-brand">need</span>{" "}
             to know.
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-balance text-primary-text font-geist max-w-5xl mx-auto text-center">
+          <p className="mt-4 text-md md:text-lg tracking-tight text-balance text-primary-text font-geist max-w-5xl mx-auto text-center">
             Got questions? We’ve got answers. Here’s everything you need to know
             before getting started.
           </p>

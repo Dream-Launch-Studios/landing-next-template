@@ -56,7 +56,7 @@ export function Testimonial() {
           <p className="text-md text-brand font-bold text-center mb-2">
             Testimonial
           </p>
-          <h2 className="text-6xl tracking-tighter  sm:text-6xl font-semibold">
+          <h2 className="tracking-tighter text-3xl md:text-6xl font-semibold">
             <span className="mr-2 text-brand font-serif">Loved by</span>
             businesses worldwide.
           </h2>

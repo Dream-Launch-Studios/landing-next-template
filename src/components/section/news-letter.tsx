@@ -18,11 +18,11 @@ export default function NewsLetter() {
             Newsletter
           </p>
           <div className="space-y-3">
-            <h3 className="text-4xl text-white font-bold tracking-tighter font-geist">
+            <h3 className="text-3xl md:text-6xl text-white font-bold tracking-tighter font-geist">
               Subscribe to our{" "}
               <span className="text-brand font-serif">newsletter</span>
             </h3>
-            <p className="leading-relaxed text-lg text-primary-text">
+            <p className="leading-relaxed text-md md:text-lg text-primary-text">
               Stay up to date with the roadmap progress, announcements and
               exclusive discounts feel free to sign up with your email.
             </p>

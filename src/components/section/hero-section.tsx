@@ -20,7 +20,7 @@ export function HeroSection() {
       <Image
         src={heroImg2}
         alt="hero-img1"
-        className="absolute -z-50 top-[30rem] md:right-0 xl:right-[20rem] blur-sm animate-bounce opacity-50 xl:opacity-80"
+        className="absolute -z-50 top-[30rem] right-0 xl:right-[20rem] blur-sm animate-bounce opacity-50 xl:opacity-80"
       />
       <Container className="mt-[12rem] mb-8 overflow-hidden ">
         <Hero className="relative">

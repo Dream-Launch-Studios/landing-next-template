@@ -19,11 +19,11 @@ export function PricingComponent() {
             <p className="text-md text-brand font-bold text-center mb-2">
               Pricing
             </p>
-            <h2 className="mb-4 text-6xl font-bold tracking-tighter">
+            <h2 className="mb-4 text-3xl md:text-6xl font-bold tracking-tighter">
               Simple <span className="font-serif text-brand">pricing,</span> no
               surprises.
             </h2>
-            <p className="text-lg tracking-tight text-primary-text">
+            <p className="text-md md:text-lg tracking-tight text-primary-text">
               Choose a plan that fits your needs, with everything you need to
               stay organized and productive.
             </p>

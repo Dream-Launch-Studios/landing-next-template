@@ -20,17 +20,10 @@ export const Footer = () => {
       className="border-t border-transparent-white mt-12 text-sm py-[5.6rem] bg-[url('https://framerusercontent.com/images/irbr4QZCegbD5uR6fKBtapXJKA.jpg')] bg-cover bg-center bg-opacity-25"
     >
       <Container className="flex flex-col md:flex-row justify-between">
-        <div className="absolute inset-0 opacity-20">
-          {/* <img
-            src="https://framerusercontent.com/images/irbr4QZCegbD5uR6fKBtapXJKA.jpg"
-            className="w-full h-full object-cover"
-            alt="Background Texture"
-          /> */}
-        </div>
         <div>
           <div className="flex flex-row lg:flex-col justify-between h-full ">
             <div className="flex text-4xl  text-off-white font-bold items-center">
-              <Image src={Logo} alt="Logo" width={100} height={100} />  
+              <Image src={Logo} alt="Logo" width={100} height={100} />
             </div>
             <div className="mt-auto flex space-x-4 [&_svg]:text-grey">
               <TwitterIcon className="hover:text-brand transition-colors" />
@@ -45,7 +38,10 @@ export const Footer = () => {
             <div
               key={column.title}
               className="min-w-[50%] lg:min-w-[18rem] mt-10 lg:mt-0"
-              style={{ textShadow: "0px -10px 70px rgba(255, 165, 0, 0.5), 0px -10px 70px rgba(255, 165, 0, 0.5)" }}
+              style={{
+                textShadow:
+                  "0px -10px 70px rgba(255, 165, 0, 0.5), 0px -10px 70px rgba(255, 165, 0, 0.5)",
+              }}
             >
               <h3 className="font-semibold mb-3 text-brand">{column.title}</h3>
               <ul>
