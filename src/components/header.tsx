@@ -6,6 +6,8 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import Logo from "../../public/logo.png";
+import Image from "next/image";
 
 export function Header() {
   const [hamburgerIcon, setHamhamburgerIcon] = useState<boolean>(false);
@@ -38,8 +40,8 @@ export function Header() {
     <header className="py-4 fixed top-0 left-0 w-full z-50">
       <Container className="flex items-center justify-between w-full p-8 rounded-full h-navigation-height border border-transparent-white backdrop-blur-sm bg-background/20 animate-fade-in [--animation-delay:200ms]">
         <div className="flex items-center gap-12">
-          <Link href="/" className="text-4xl font-bold">
-            Logo
+          <Link href="/" className="text-4xl font-bold -ml-2">
+            <Image style={{ textShadow: "0px -10px 70px rgba(255, 165, 0, 0.5), 0px -10px 70px rgba(255, 165, 0, 0.5)" }} src={Logo} alt="Logo" width={100} height={100} />
           </Link>
           <nav
             className={cn(

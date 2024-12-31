@@ -4,8 +4,8 @@ import { Container } from "../container";
 export function Companies() {
   return (
     <>
-      <Container>
-        <p className="text-md text-center text-brand font-medium">Trusted By</p>
+      <Container className="mt-12">
+        <p className="text-xl text-center text-brand font-medium">Trusted By</p>
 
         <div className="flex items-center max-w-[70rem] mx-auto my-5 overflow-hidden  mask-image-custom">
           <div className="flex animate-infinite-scroll [--animation-delay:40s]">

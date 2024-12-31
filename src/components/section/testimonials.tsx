@@ -25,7 +25,7 @@ const ReviewCard = ({
       className={cn(
         "relative w-64 cursor-pointer overflow-hidden rounded-xl border border-brand p-4",
         "border-brand bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        "dark:border-brand dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "dark:border-brand/40 dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -64,7 +64,10 @@ export function Testimonial() {
           </p>
         </div>
 
-        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl mask-image-custom pb-10">
+        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl mask-image-custom pb-10">
+          <div className="absolute inset-0 opacity-10">
+            <img src="https://framerusercontent.com/images/irbr4QZCegbD5uR6fKBtapXJKA.jpg" className="w-full h-full object-cover" alt="Background Texture" />
+          </div>
           <Marquee pauseOnHover className="[--duration:20s]">
             {firstRow.map((review) => (
               <ReviewCard key={review.name} {...review} />

@@ -30,7 +30,7 @@ export default function Features() {
       className="py-16 container mx-auto"
     >
       <h1 className="font-geistMono tracking-tight text-3xl md:text-6xl text-center font-bold mb-4">
-        Packed with <span className="text-brand">powerful features</span>
+        Packed with <span className="text-brand glow" style={{ textShadow: "0px -10px 70px rgba(255, 165, 0, 0.5), 0px -10px 70px rgba(255, 165, 0, 0.5)" }}>powerful features</span>
       </h1>
       <p className="max-w-5xl text-center mx-auto text-primary-text text-lg font-medium">
         From Image generation to video generation, Everything AI has APIs for
@@ -78,7 +78,7 @@ export default function Features() {
           title="Sell globally"
           description="PerkAI helps you sell in locations currently under international embargo."
           graphic={
-            <div className="absolute inset-0 -top-44 -left-60 bg-[url(https://framerusercontent.com/images/h496iPSwtSnGZwpJyErl6cLWdtE.png)] object-contain" />
+            <div className="absolute inset-0 -top-44 -left-60 bg-[url(https://framerusercontent.com/images/CoAe1eW9S1x6kWgYfFZw038Bw.png?scale-down-to=512)] object-contain" />
           }
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
@@ -134,6 +134,6 @@ export function BentoCard({
           {description}
         </p>
       </div>
-    </motion.div>
+    </motion.div>    
   );
 }
