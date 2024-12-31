@@ -6,6 +6,7 @@ import { Spotlight } from "../ui/spotlight";
 import Image from "next/image";
 import heroImg1 from "@/../public/heroimg1.avif";
 import heroImg2 from "@/../public/heroimg2.avif";
+import { serif } from "@/app/layout";
 
 export function HeroSection() {
   return (
@@ -24,7 +25,10 @@ export function HeroSection() {
       <Container className="mt-[12rem] mb-8 overflow-hidden ">
         <Hero className="relative">
           <HeroTitle className=" animate-fade-in [--animation-delay:200ms] opacity-0 translate-y-[-1rem] font-semibold">
-            Effectively <span className="text-brand">Translate</span>
+            Effectively{" "}
+            <span className={`text-brand ${serif.className} italic`}>
+              Translate
+            </span>
             <br className="hidden md:block" /> Your Site With AI
           </HeroTitle>
 

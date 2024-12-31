@@ -10,13 +10,17 @@ export default function NewsLetter() {
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ ease: "easeIn", delay: 0.3 }}
-      className="py-10 max-w-screen-xl mx-auto "
+      className="py-16 max-w-screen-xl mx-auto "
     >
       <div className="relative overflow-hidden mx-4 px-4 py-14 bg-transparent rounded-2xl  md:px-8 md:mx-8">
         <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <p className="text-md text-brand font-bold text-center mb-2">
+            Newsletter
+          </p>
           <div className="space-y-3">
             <h3 className="text-4xl text-white font-bold tracking-tighter font-geist">
-              Subscribe to our <span className="text-brand">newsletter</span>
+              Subscribe to our{" "}
+              <span className="text-brand font-serif">newsletter</span>
             </h3>
             <p className="leading-relaxed text-lg text-primary-text">
               Stay up to date with the roadmap progress, announcements and

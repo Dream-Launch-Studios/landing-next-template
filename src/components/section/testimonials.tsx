@@ -51,10 +51,13 @@ export function Testimonial() {
       transition={{ ease: "easeIn", delay: 0.3 }}
       className="animate-fade-in"
     >
-      <Container className="py-10">
+      <Container className="py-16">
         <div className="mx-auto max-w-full text-center mb-10">
+          <p className="text-md text-brand font-bold text-center mb-2">
+            Testimonial
+          </p>
           <h2 className="text-6xl tracking-tighter  sm:text-6xl font-semibold">
-            <span className="mr-2 text-brand">Loved by</span>
+            <span className="mr-2 text-brand font-serif">Loved by</span>
             businesses worldwide.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-primary-text font-geist max-w-5xl mx-auto text-center">
@@ -66,7 +69,11 @@ export function Testimonial() {
 
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl mask-image-custom pb-10">
           <div className="absolute inset-0 opacity-10">
-            <img src="https://framerusercontent.com/images/irbr4QZCegbD5uR6fKBtapXJKA.jpg" className="w-full h-full object-cover" alt="Background Texture" />
+            <img
+              src="https://framerusercontent.com/images/irbr4QZCegbD5uR6fKBtapXJKA.jpg"
+              className="w-full h-full object-cover"
+              alt="Background Texture"
+            />
           </div>
           <Marquee pauseOnHover className="[--duration:20s]">
             {firstRow.map((review) => (

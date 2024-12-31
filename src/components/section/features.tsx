@@ -29,8 +29,18 @@ export default function Features() {
       transition={{ ease: "easeIn", delay: 0.3 }}
       className="py-16 container mx-auto"
     >
+      <p className="text-md text-brand font-bold text-center mb-2">Features</p>
       <h1 className="font-geistMono tracking-tight text-3xl md:text-6xl text-center font-bold mb-4">
-        Packed with <span className="text-brand glow" style={{ textShadow: "0px -10px 70px rgba(255, 165, 0, 0.5), 0px -10px 70px rgba(255, 165, 0, 0.5)" }}>powerful features</span>
+        Packed with{" "}
+        <span
+          className="text-brand glow font-serif"
+          style={{
+            textShadow:
+              "0px -10px 70px rgba(255, 165, 0, 0.5), 0px -10px 70px rgba(255, 165, 0, 0.5)",
+          }}
+        >
+          powerful features
+        </span>
       </h1>
       <p className="max-w-5xl text-center mx-auto text-primary-text text-lg font-medium">
         From Image generation to video generation, Everything AI has APIs for
@@ -134,6 +144,6 @@ export function BentoCard({
           {description}
         </p>
       </div>
-    </motion.div>    
+    </motion.div>
   );
 }

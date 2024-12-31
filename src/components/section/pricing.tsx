@@ -12,16 +12,19 @@ export function PricingComponent() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ ease: "easeIn", delay: 0.3 }}
-        className="overflow-hidden py-24  text-neutral-800 dark:text-neutral-50 lg:pb-32"
+        className="overflow-hidden py-16  text-neutral-800 dark:text-neutral-50 lg:pb-32"
       >
         <div className="container mx-auto px-4">
-          <div className="mx-auto mb-20 max-w-2xl text-center">
+          <div className="mx-auto mb-20 max-w-4xl text-center">
+            <p className="text-md text-brand font-bold text-center mb-2">
+              Pricing
+            </p>
             <h2 className="mb-4 text-6xl font-bold tracking-tighter">
-              Pricing <span className="text-brand">&amp;</span> Plans
+              Simple <span className="font-serif">pricing,</span> no surprises.
             </h2>
             <p className="text-lg tracking-tight text-primary-text">
-              Use and reuse tons of responsive sections to create the perfect
-              layout. Sections are ready.
+              Choose a plan that fits your needs, with everything you need to
+              stay organized and productive.
             </p>
           </div>
 
