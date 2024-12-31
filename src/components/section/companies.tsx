@@ -4,7 +4,7 @@ import { Container } from "../container";
 export function Companies() {
   return (
     <>
-      <Container className="mt-12">
+      <Container className="mt-0">
         <p className="text-xl text-center text-brand font-bold">Trusted By</p>
 
         <div className="flex items-center max-w-[70rem] mx-auto my-5 overflow-hidden  mask-image-custom">
