@@ -102,3 +102,31 @@ export const footerLinks = [
     ],
   },
 ];
+
+export const faq = [
+  {
+    question: "What is this platform about?",
+    answer:
+      "Our platform leverages AI to help you seamlessly translate and optimize your website content, making it accessible to a global audience.",
+  },
+  {
+    question: "Is there a free trial available?",
+    answer:
+      "Yes, we offer a 14-day free trial for all our plans, allowing you to explore our features without any commitment.",
+  },
+  {
+    question: "What are the supported languages?",
+    answer:
+      "Our AI supports over 100 languages, ensuring comprehensive coverage for your website's needs.",
+  },
+  {
+    question: "Can I integrate this with my existing tools?",
+    answer:
+      "Absolutely! We provide integrations with popular CMS platforms and developer tools to make the process effortless.",
+  },
+  {
+    question: "What kind of support do you provide?",
+    answer:
+      "We offer priority email support for our premium plans, ensuring your queries are resolved quickly and efficiently.",
+  },
+];

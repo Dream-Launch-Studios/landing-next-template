@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
 @layer base {
   :root {
@@ -37,5 +38,13 @@
     );
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: "Instrument+Serif";
+    font-style: italic;
+    font-weight: 400;
   }
 }

@@ -1,6 +1,7 @@
 import { Footer } from "@/components/footer";
 import ScrollZoom from "@/components/hero-image";
 import { Companies } from "@/components/section/companies";
+import { FAQ } from "@/components/section/faq";
 import Features from "@/components/section/features";
 import { HeroSection } from "@/components/section/hero-section";
 import NewsLetter from "@/components/section/news-letter";
@@ -16,6 +17,7 @@ export default function Home() {
       <Features />
       <Testimonial />
       <PricingComponent />
+      <FAQ />
       <NewsLetter />
       <Footer />
     </div>
