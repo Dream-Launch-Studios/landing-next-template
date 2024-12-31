@@ -37,7 +37,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="py-4 fixed top-0 left-0 w-full z-50">
+    <header className="mt-4 fixed top-0 left-0 w-full z-50">
       <Container className="flex items-center justify-between w-full p-8 rounded-full h-navigation-height border border-transparent-white backdrop-blur-sm bg-background/20 animate-fade-in [--animation-delay:200ms]">
         <div className="flex items-center gap-12">
           <Link href="/">
@@ -54,15 +54,15 @@ export function Header() {
           </Link>
           <nav
             className={cn(
-              "transition-opacity duration-500 h-[calc(100vh_-_var(--navigation-height))] overflow-auto md:block fixed top-navigation-height left-0 w-full bg-background md:relative md:h-auto md:top-0 md:w-auto md:bg-transparent md:opacity-100 md:translate-x-0 ",
+              "transition-opacity duration-500 h-[calc(100vh_-_var(--navigation-height))] overflow-auto md:block fixed top-navigation-height mt-4 md:mt-0 left-0 w-full bg-background/70 md:relative md:h-auto md:top-0 md:w-auto md:bg-transparent md:opacity-100 md:translate-x-0 ",
               hamburgerIcon
-                ? "opacity-100 translate-x-0"
+                ? "opacity-100 translate-x-0 border-t border-brand rounded-t-3xl"
                 : "opacity-0 translate-x-[-100vw]"
             )}
           >
             <ul
               className={cn(
-                "flex h-full flex-col md:flex-row md:items-center [&_li]:ml-6 [&_li]:border-b  [&_li]:border-transparent-white md:[&_li]:border-none ease-in [&_a]:text-primary-text [&_a:hover]:text-brand [&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:translate-y-8 [&_a]:items-center [&_a]:text-xl [&_a]:transition-[color,transform] [&_a]:duration-300 md:[&_a]:translate-y-0 md:[&_a]:text-sm [&_a]:md:transition-colors",
+                "flex h-full flex-col md:flex-row md:items-center [&_li]:ml-6 [&_li]:border-b  [&_li]:border-transparent-white md:[&_li]:border-none ease-in [&_a]:text-white [&_a:hover]:text-brand [&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:translate-y-8 [&_a]:items-center [&_a]:text-xl [&_a]:transition-[color,transform] [&_a]:duration-300 md:[&_a]:translate-y-0 md:[&_a]:text-sm [&_a]:md:transition-colors",
                 hamburgerIcon && "[&_a]:translate-y-0"
               )}
             >
